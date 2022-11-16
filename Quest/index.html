@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Queres ser mi novia | Do you want to be my girlfriend?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type='text/css' media="screen" href="style.css">
+  <script src="main.js"></script>
+  <script>
+    function accionSI(){
+      alert('Oh gracias. Te prometo que te voy muy feliz! :> | Oh thanks. I promise you that I will be very happy! :>');
+    }
+    function moverBoton(){
+      width = window.innerWidth;
+      height = window.innerHeight;
+
+      newWidth=(Math.random() * width);
+      newHeight=(Math.random() * height);
+
+      document.getElementById('NO').style.position='absolute';
+      document.getElementById('NO').style.left=newWidth + "px";
+      document.getElementById('NO').style.top=newWidth + "px";
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Quieres ser mi novia?</h1><h1>- Do you want to be my girlfriend?</h1>
+  <input type='button' onclick="accionSI()" id="SI" value="Yes"/>
+  <input type='button' id="NO" onmouseover="moverBoton()" value="NO"/>
+</body>
+</html>
